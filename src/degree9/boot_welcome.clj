@@ -17,9 +17,10 @@
 
 (boot/deftask welcome
   "Display a welcome message with  ascii art."
-  []
+  [m message str "Message to be displayed."
+   f font    str "Font to be used for ASCII art."]
   (let [msg  (:message *opts* "Welcome!")
-        font (:font *opts* "isometric2.flf")
+        font (:font *opts* "banner.flf")
         file (or (file-font font) (resource-font font) (default-font font))]
     (when-not file
       (util/warn "Missing Font...: %s \n" font)
