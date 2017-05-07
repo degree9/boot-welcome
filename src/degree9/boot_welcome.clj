@@ -20,7 +20,7 @@
   [m message  VAL  str "Message to be displayed."
    f font     VAL  str "Font to be used for ASCII art."]
   (let [msg  (:message *opts* "Welcome!")
-        font (:font *opts* "banner.flf")
+        font (:font *opts* "cyberlarge.flf")
         file (or (file-font font) (resource-font font) (default-font font))]
     (when-not file
       (util/warn "Missing Font...: %s \n" font)
