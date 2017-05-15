@@ -16,9 +16,9 @@
       f)))
 
 (boot/deftask welcome
-  "Display a welcome message with  ascii art."
-  [m message  VAL  str "Message to be displayed."
-   f font     VAL  str "Font to be used for ASCII art."]
+  "Display a welcome message with ascii art."
+  [m message  VAL  str "Message to be displayed. (Welcome!)"
+   f font     VAL  str "Font to be used for ASCII art. (cyberlarge.flf)"]
   (let [msg  (:message *opts* "Welcome!")
         font (:font *opts* "cyberlarge.flf")
         file (or (file-font font) (resource-font font) (default-font font))]
